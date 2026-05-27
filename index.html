@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Siswa SMK</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">🎨</span>
+    <span>Porto<strong>SMK</strong></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#beranda" class="nav-link">Beranda</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-link dropdown-toggle">Mata Pelajaran <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="#dkv"><i class="fas fa-palette"></i> Produktif DKV</a></li>
+        <li><a href="#agama"><i class="fas fa-mosque"></i> Agama</a></li>
+        <li><a href="#bind"><i class="fas fa-book-open"></i> Bahasa Indonesia</a></li>
+        <li><a href="#lainnya"><i class="fas fa-graduation-cap"></i> Lainnya</a></li>
+      </ul>
+    </li>
+    <li><a href="#kontak" class="nav-link">Kontak</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+</nav>
+
+<!-- HERO / BERANDA -->
+<section class="hero" id="beranda">
+  <div class="hero-bg-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting">✨ Halo, Selamat Datang!</p>
+      <h1 class="hero-name">brilian syafi'ul ulum</h1> <span class="highlight">Siswa</span></h1>
+      <p class="hero-school">SMK Negeri 1 kota mojokerto · Jurusan DKV</p>
+      <p class="hero-desc">Siswa kreatif yang bersemangat dalam dunia desain grafis, seni visual, dan teknologi. Berikut adalah kumpulan karya dan pencapaian selama masa belajar.</p>
+      <div class="hero-btns">
+        <a href="#dkv" class="btn btn-primary"><i class="fas fa-images"></i> Lihat Karya</a>
+        <a href="#kontak" class="btn btn-outline"><i class="fas fa-envelope"></i> Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <div class="avatar-ring">
+        <div class="avatar-img">
+          <img src="MFG (my foto gw).jpeg" alt="Foto Profil" />
+        </div>
+      </div>
+      <div class="floating-badge badge1"><i class="fas fa-palette"></i> DKV</div>
+      <div class="floating-badge badge2"><i class="fas fa-star"></i> Kreatif</div>
+      <div class="floating-badge badge3"><i class="fas fa-award"></i> Berprestasi</div>
+    </div>
+  </div>
+  <div class="scroll-down"><a href="#dkv"><i class="fas fa-chevron-down"></i></a></div>
+</section>
+
+<!-- PRODUKTIF DKV -->
+<section class="section" id="dkv">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🎨 Kompetensi Keahlian</span>
+      <h2>Produktif <span class="highlight">DKV</span></h2>
+      <p>Desain Komunikasi Visual — kumpulan karya terbaik dari berbagai proyek desain</p>
+    </div>
+    <div class="dkv-categories">
+      <button class="cat-btn active" data-cat="all">Semua</button>
+      <button class="cat-btn" data-cat="poster">Poster</button>
+      <button class="cat-btn" data-cat="ilustrasi">Ilustrasi</button>
+      <button class="cat-btn" data-cat="fotografi">Fotografi</button>
+    </div>
+    <div class="dkv-grid" id="dkvGrid">
+      <!-- Card 2 -->
+      <div class="dkv-card" data-cat="poster">
+        <div class="dkv-upload-group">
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Sketsa 1</span>
+            </div>
+            <img class="preview-img" src="" alt="preview" style="display:none"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Sketsa 2</span>
+            </div>
+            <img class="preview-img" src="" alt="preview" style="display:none"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="dkv-card-info">
+          <h4>Sketsa</h4>
+          <p>Karya sketsa tangan dan digital</p>
+          <span class="dkv-tag">Poster Design</span>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="dkv-card" data-cat="ilustrasi">
+        <div class="dkv-upload-group">
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder" style="display:none">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Ilustrasi 1</span>
+            </div>
+            <img class="preview-img" src="sketsa 2.jpeg" alt="Karya Ilustrasi 1" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder" style="display:none">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Ilustrasi 2</span>
+            </div>
+            <img class="preview-img" src="sketsa.jpeg" alt="Karya Ilustrasi 2" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="dkv-card-info">
+          <h4>Gambar Ilustrasi</h4>
+          <p>Karya ilustrasi digital kreatif</p>
+          <span class="dkv-tag">Digital Art</span>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="dkv-card" data-cat="fotografi">
+        <div class="dkv-upload-group">
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder" style="display:none">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Foto 1</span>
+            </div>
+            <img class="preview-img" src="panning.jpeg" alt="Foto Panning Motor" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="dkv-upload" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+            <div class="upload-placeholder" style="display:none">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Klik untuk upload foto</p>
+              <span>Foto 2</span>
+            </div>
+            <img class="preview-img" src="foodie.jpeg" alt="Foto Makanan" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="dkv-card-info">
+          <h4>Fotografi</h4>
+          <p>Dokumentasi dan foto artistik</p>
+          <span class="dkv-tag">Photography</span>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="dkv-card" data-cat="ilustrasi">
+        <div class="dkv-upload" onclick="triggerUpload(this)">
+          <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
+          <div class="upload-placeholder" style="display:none">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Klik untuk upload foto</p>
+            <span>Tipografi</span>
+          </div>
+          <img class="preview-img" src="tipografi.jpeg" alt="Karya Tipografi" style="display:block"/>
+          <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="dkv-card-info">
+          <h4>Tipografi</h4>
+          <p>Eksplorasi desain huruf dan teks</p>
+          <span class="dkv-tag">Typography</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGAMA -->
+<section class="section section-alt" id="agama">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🕌 Pendidikan Karakter</span>
+      <h2>Pendidikan <span class="highlight">Agama</span></h2>
+      <p>Refleksi nilai-nilai keagamaan dan spiritual dalam kehidupan sehari-hari</p>
+    </div>
+    <div class="mapel-layout">
+      <div class="mapel-info-card">
+        <div class="mapel-icon-big"><i class="fas fa-mosque"></i></div>
+        <h3>Pendidikan Agama Islam</h3>
+        <div class="nilai-box">
+          <div class="nilai-item"><span>Nilai Rata-rata</span><strong class="nilai-score">90</strong></div>
+          <div class="nilai-item"><span>Semester</span><strong>Genap 2026</strong></div>
+          <div class="nilai-item"><span>Predikat</span><strong class="predikat-a">A</strong></div>
+        </div>
+        <div class="kompetensi-list">
+          <h4>Kompetensi yang Dicapai:</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Memahami Al-Qur'an dan Hadits</li>
+            <li><i class="fas fa-check-circle"></i> Akidah dan Akhlak Mulia</li>
+            <li><i class="fas fa-check-circle"></i> Fiqih Ibadah dan Muamalah</li>
+            <li><i class="fas fa-check-circle"></i> Sejarah Peradaban Islam</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mapel-content-area">
+        <div class="refleksi-card">
+          <h4><i class="fas fa-quote-left"></i> Refleksi Pembelajaran</h4>
+          <p>"Melalui pelajaran agama, saya belajar bahwa ilmu tanpa akhlak adalah sia-sia. Nilai-nilai Islam mengajarkan saya untuk selalu jujur, disiplin, dan bertanggung jawab dalam setiap karya yang saya buat."</p>
+        </div>
+        <div class="kegiatan-grid">
+          <div class="kegiatan-item">
+            <i class="fas fa-book-quran"></i>
+            <h5>Tadarus Al-Qur'an</h5>
+            <p>Rutin setiap pagi sebelum KBM</p>
+          </div>
+          <div class="kegiatan-item">
+            <i class="fas fa-hands-praying"></i>
+            <h5>Sholat Berjamaah</h5>
+            <p>Sholat Dzuhur bersama di sekolah</p>
+          </div>
+          <div class="kegiatan-item">
+            <i class="fas fa-heart"></i>
+            <h5>Kegiatan Sosial</h5>
+            <p>Bakti sosial dan infaq rutin</p>
+          </div>
+          <div class="kegiatan-item">
+            <i class="fas fa-star"></i>
+            <h5>Pesantren Kilat</h5>
+            <p>Kegiatan Ramadhan di sekolah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAHASA INDONESIA -->
+<section class="section" id="bind">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">📚 Bahasa & Sastra</span>
+      <h2>Bahasa <span class="highlight">Indonesia</span></h2>
+      <p>Kemampuan berbahasa, menulis, dan mengapresiasi karya sastra Indonesia</p>
+    </div>
+    <div class="mapel-layout">
+      <div class="mapel-info-card">
+        <div class="mapel-icon-big" style="background: linear-gradient(135deg,#e74c3c,#c0392b)"><i class="fas fa-book"></i></div>
+        <h3>Bahasa Indonesia</h3>
+        <div class="nilai-box">
+          <div class="nilai-item"><span>Nilai Rata-rata</span><strong class="nilai-score">88</strong></div>
+          <div class="nilai-item"><span>Semester</span><strong>Genap 2026</strong></div>
+          <div class="nilai-item"><span>Predikat</span><strong class="predikat-a">A</strong></div>
+        </div>
+        <div class="kompetensi-list">
+          <h4>Kompetensi yang Dicapai:</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Menulis Teks Eksposisi</li>
+            <li><i class="fas fa-check-circle"></i> Apresiasi Sastra & Puisi</li>
+            <li><i class="fas fa-check-circle"></i> Debat dan Presentasi</li>
+            <li><i class="fas fa-check-circle"></i> Analisis Teks Berita</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mapel-content-area">
+        <div class="karya-tulis">
+          <h4><i class="fas fa-pen-nib"></i> Karya Tulis Terbaik</h4>
+          <div class="karya-item">
+            <span class="karya-type">Puisi</span>
+            <h5>"Warna-Warni Mimpi"</h5>
+            <p>Puisi tentang semangat belajar dan meraih cita-cita di bangku SMK</p>
+          </div>
+          <div class="karya-item">
+            <span class="karya-type">Esai</span>
+            <h5>"Peran DKV di Era Digital"</h5>
+            <p>Esai argumentatif tentang pentingnya desain komunikasi visual di era modern</p>
+          </div>
+          <div class="karya-item">
+            <span class="karya-type">Cerpen</span>
+            <h5>"Sketsa Terakhir"</h5>
+            <p>Cerpen tentang perjuangan seorang siswa DKV meraih impiannya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATA PELAJARAN LAINNYA -->
+<section class="section section-alt" id="lainnya">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">📖 Mata Pelajaran</span>
+      <h2>Mata Pelajaran <span class="highlight">Lainnya</span></h2>
+      <p>Pencapaian akademik di berbagai bidang studi selama di SMK</p>
+    </div>
+    <div class="mapel-grid">
+
+      <!-- Seni Budaya -->
+      <div class="mapel-card" style="--accent:#e91e63">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-music"></i></div>
+          <div>
+            <h4>Seni Budaya</h4>
+            <span class="mapel-badge">Nilai: 92</span>
+          </div>
+        </div>
+        <p>Apresiasi seni rupa, musik, tari, dan teater. Mengembangkan kepekaan estetika dan kreativitas.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:92%">92</div></div>
+        <ul class="mapel-list">
+          <li>Pameran Seni Sekolah</li>
+          <li>Pertunjukan Seni Budaya</li>
+        </ul>
+      </div>
+
+      <!-- PPKN -->
+      <div class="mapel-card" style="--accent:#f44336">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-flag"></i></div>
+          <div>
+            <h4>PPKN</h4>
+            <span class="mapel-badge">Nilai: 87</span>
+          </div>
+        </div>
+        <p>Pendidikan Pancasila dan Kewarganegaraan. Memahami hak, kewajiban, dan nilai-nilai kebangsaan.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:87%">87</div></div>
+        <ul class="mapel-list">
+          <li>Debat Kewarganegaraan</li>
+          <li>Upacara Bendera Aktif</li>
+        </ul>
+      </div>
+
+      <!-- PJOK -->
+      <div class="mapel-card" style="--accent:#4caf50">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-running"></i></div>
+          <div>
+            <h4>PJOK</h4>
+            <span class="mapel-badge">Nilai: 89</span>
+          </div>
+        </div>
+        <p>Pendidikan Jasmani, Olahraga, dan Kesehatan. Menjaga kebugaran dan sportivitas.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:89%">89</div></div>
+        <ul class="mapel-list">
+          <li>Juara Voli Antar Kelas</li>
+          <li>Aktif Senam Pagi</li>
+        </ul>
+      </div>
+
+      <!-- Bahasa Inggris -->
+      <div class="mapel-card" style="--accent:#2196f3">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-globe"></i></div>
+          <div>
+            <h4>Bahasa Inggris</h4>
+            <span class="mapel-badge">Nilai: 85</span>
+          </div>
+        </div>
+        <p>Kemampuan komunikasi bahasa Inggris lisan dan tulisan untuk dunia kerja global.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:85%">85</div></div>
+        <ul class="mapel-list">
+          <li>English Conversation Club</li>
+          <li>Presentasi Bahasa Inggris</li>
+        </ul>
+      </div>
+
+      <!-- Bahasa Jawa -->
+      <div class="mapel-card" style="--accent:#ff9800">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-scroll"></i></div>
+          <div>
+            <h4>Bahasa Jawa</h4>
+            <span class="mapel-badge">Nilai: 88</span>
+          </div>
+        </div>
+        <p>Melestarikan bahasa dan budaya Jawa. Memahami unggah-ungguh dan sastra Jawa.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:88%">88</div></div>
+        <ul class="mapel-list">
+          <li>Geguritan & Tembang</li>
+          <li>Aksara Jawa</li>
+        </ul>
+      </div>
+
+      <!-- Sejarah -->
+      <div class="mapel-card" style="--accent:#795548">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-landmark"></i></div>
+          <div>
+            <h4>Sejarah</h4>
+            <span class="mapel-badge">Nilai: 86</span>
+          </div>
+        </div>
+        <p>Memahami perjalanan sejarah Indonesia dan dunia sebagai pelajaran untuk masa depan.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:86%">86</div></div>
+        <ul class="mapel-list">
+          <li>Kunjungan Museum</li>
+          <li>Makalah Sejarah Lokal</li>
+        </ul>
+      </div>
+
+      <!-- IPAS -->
+      <div class="mapel-card" style="--accent:#00bcd4">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-flask"></i></div>
+          <div>
+            <h4>IPAS</h4>
+            <span class="mapel-badge">Nilai: 84</span>
+          </div>
+        </div>
+        <p>Ilmu Pengetahuan Alam dan Sosial. Memahami fenomena alam dan kehidupan sosial masyarakat.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:84%">84</div></div>
+        <ul class="mapel-list">
+          <li>Praktikum Sains</li>
+          <li>Proyek Lingkungan Hidup</li>
+        </ul>
+      </div>
+
+      <!-- Informatika -->
+      <div class="mapel-card" style="--accent:#9c27b0">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-laptop-code"></i></div>
+          <div>
+            <h4>Informatika</h4>
+            <span class="mapel-badge">Nilai: 91</span>
+          </div>
+        </div>
+        <p>Dasar-dasar pemrograman, logika komputasi, dan literasi digital untuk era teknologi.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:91%">91</div></div>
+        <ul class="mapel-list">
+          <li>Proyek Web Sederhana</li>
+          <li>Lomba Coding Sekolah</li>
+        </ul>
+      </div>
+
+      <!-- Matematika -->
+      <div class="mapel-card" style="--accent:#607d8b">
+        <div class="mapel-card-header">
+          <div class="mapel-card-icon"><i class="fas fa-calculator"></i></div>
+          <div>
+            <h4>Matematika</h4>
+            <span class="mapel-badge">Nilai: 83</span>
+          </div>
+        </div>
+        <p>Logika matematika, aljabar, dan statistika sebagai fondasi berpikir analitis dan kritis.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:83%">83</div></div>
+        <ul class="mapel-list">
+          <li>Olimpiade Matematika</li>
+          <li>Tutor Sebaya</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="section" id="kontak">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">📬 Hubungi Saya</span>
+      <h2>Informasi <span class="highlight">Kontak</span></h2>
+      <p>Jangan ragu untuk menghubungi saya melalui berbagai sosial media yang ada di bawah ini ya</p>
+    </div>
+    <div class="kontak-layout">
+      <div class="kontak-cards">
+
+        <a href="mailto:syafiululumbrilian@email.com" class="kontak-card email">
+          <div class="kontak-icon"><i class="fas fa-envelope"></i></div>
+          <div class="kontak-info">
+            <span class="kontak-label">Email</span>
+            <span class="kontak-value">syafiululumbrilian@email.com</span>
+          </div>
+          <i class="fas fa-arrow-right kontak-arrow"></i>
+        </a>
+
+        <a href="https://instagram.com/yansh_pnnts1903" target="_blank" class="kontak-card instagram">
+          <div class="kontak-icon"><i class="fab fa-instagram"></i></div>
+          <div class="kontak-info">
+            <span class="kontak-label">Instagram</span>
+            <span class="kontak-value">@yansh_pnnts1903</span>
+          </div>
+          <i class="fas fa-arrow-right kontak-arrow"></i>
+        </a>
+
+        <a href="https://wa.me/6282326972054" target="_blank" class="kontak-card whatsapp">
+          <div class="kontak-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="kontak-info">
+            <span class="kontak-label">WhatsApp</span>
+            <span class="kontak-value">+6282326972054</span>
+          </div>
+          <i class="fas fa-arrow-right kontak-arrow"></i>
+        </a>
+
+        <a href="https://tiktok.com/@elkusla.id" target="_blank" class="kontak-card tiktok">
+          <div class="kontak-icon"><i class="fab fa-tiktok"></i></div>
+          <div class="kontak-info">
+            <span class="kontak-label">TikTok</span>
+            <span class="kontak-value">@elkusla.id</span>
+          </div>
+          <i class="fas fa-arrow-right kontak-arrow"></i>
+        </a>
+
+        <div class="kontak-card lokasi">
+          <div class="kontak-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="kontak-info">
+            <span class="kontak-label">Lokasi Sekolah</span>
+            <span class="kontak-value">SMK Negeri 1 mojokerto, jalan kedungsari, mergelo, gunung gedangan,kecamatan magersari, kota mojokerto, jawa timur 61315</span>
+          </div>
+          <i class="fas fa-arrow-right kontak-arrow"></i>
+        </div>
+
+      </div>
+
+      <div class="kontak-map">
+        <div class="map-header">
+          <i class="fas fa-map-marked-alt"></i>
+          <h4>Lokasi Sekolah</h4>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0!2d110.3!3d-7.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnMDAuMCJTIDExMMKwMTgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+            width="100%" height="300" style="border:0;border-radius:16px;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/okV3DWh8LMW5qMkS7" target="_blank" class="btn btn-primary map-btn">
+          <i class="fas fa-directions"></i> Buka di Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <span class="brand-icon">🎨</span>
+      <span>Porto<strong>SMK</strong></span>
+    </div>
+    <p>© 2024 Portofolio Saya ini · Dibuat dengan <i class="fas fa-heart" style="color:#e74c3c"></i> penuh semangat untuk masa depan yang kebih cerah</p>
+    <div class="footer-socials">
+      <a href="mailto:syafiululumbrilian@email.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://instagram.com/yansh_pnnts1903" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/6282326972054" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://tiktok.com/@elkusla.id" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
