@@ -84,23 +84,23 @@
         <div class="dkv-upload-group">
           <div class="dkv-upload" onclick="triggerUpload(this)">
             <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
-            <div class="upload-placeholder">
+            <div class="upload-placeholder" style="display:none">
               <i class="fas fa-cloud-upload-alt"></i>
               <p>Klik untuk upload foto</p>
               <span>Sketsa 1</span>
             </div>
-            <img class="preview-img" src="" alt="preview" style="display:none"/>
-            <button class="remove-img" onclick="removeImage(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+            <img class="preview-img" src="sketsa4.jpeg" alt="Karya Sketsa 1" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
           </div>
           <div class="dkv-upload" onclick="triggerUpload(this)">
             <input type="file" accept="image/*" class="file-input" onchange="previewImage(event, this)"/>
-            <div class="upload-placeholder">
+            <div class="upload-placeholder" style="display:none">
               <i class="fas fa-cloud-upload-alt"></i>
               <p>Klik untuk upload foto</p>
               <span>Sketsa 2</span>
             </div>
-            <img class="preview-img" src="" alt="preview" style="display:none"/>
-            <button class="remove-img" onclick="removeImage(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+            <img class="preview-img" src="sketsa3.jpeg" alt="Karya Sketsa 2" style="display:block"/>
+            <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
           </div>
         </div>
         <div class="dkv-card-info">
