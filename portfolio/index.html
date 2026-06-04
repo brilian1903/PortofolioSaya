@@ -224,9 +224,9 @@
             <p>Klik untuk upload foto</p>
             <span>Mockup Brand</span>
           </div>
-          <img class="preview-img" src="" alt="Mockup Brand" style="display:none"/>
+          <img class="preview-img" src="mockupbrand.jpeg" alt="Mockup Brand" style="display:block"/>
           <div class="img-hover-hint"><i class="fas fa-search-plus"></i></div>
-          <button class="remove-img" onclick="removeImage(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+          <button class="remove-img" onclick="removeImage(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
         </div>
         <div class="dkv-card-info">
           <h4>Mockup Brand</h4>
@@ -237,19 +237,19 @@
 
       <!-- Card 8 - Brandbook -->
       <div class="dkv-card" data-cat="poster">
-        <div class="dkv-upload pdf-upload" onclick="triggerPdfUpload(this)">
+        <div class="dkv-upload pdf-upload has-pdf" onclick="triggerPdfUpload(this)">
           <input type="file" accept="application/pdf" class="file-input-pdf" onchange="previewPdf(event, this)"/>
-          <div class="upload-placeholder pdf-placeholder">
+          <div class="upload-placeholder pdf-placeholder" style="display:none">
             <i class="fas fa-file-pdf"></i>
             <p>Klik untuk upload PDF</p>
             <span>Brandbook</span>
           </div>
-          <div class="pdf-preview" style="display:none">
+          <div class="pdf-preview" style="display:flex">
             <i class="fas fa-file-pdf pdf-icon-big"></i>
-            <p class="pdf-filename"></p>
-            <a class="pdf-open-btn" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Buka PDF</a>
+            <p class="pdf-filename">brandbook.pdf</p>
+            <a class="pdf-open-btn" href="brandbook.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> Buka PDF</a>
           </div>
-          <button class="remove-img" onclick="removePdf(event, this)" style="display:none"><i class="fas fa-times"></i></button>
+          <button class="remove-img" onclick="removePdf(event, this)" style="display:flex"><i class="fas fa-times"></i></button>
         </div>
         <div class="dkv-card-info">
           <h4>Brandbook</h4>
